@@ -1,5 +1,5 @@
-// select the directorie with the files and the directorie
-// when the ready files will be saved
+// select the directory with the files and the directory
+// where the ready files will be saved
 
 dir1 = getDirectory("Choose a source Directory ");
 dir2 = getDirectory("Choose a result Directory ");
