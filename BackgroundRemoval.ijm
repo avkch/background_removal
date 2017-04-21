@@ -20,8 +20,10 @@ for (i=0; i<list.length; i++) {
 for (i=0; i<list.length; i++) {
 	if(!matches(list[i], ".*background.*")) {
 		path = dir1+list[i];
+		setBatchMode(true);
 		showProgress(i, list.length);
 		open(path);
+		run("RGB Color");
 		imageCalculator("Add create stack", list[i],bgr);
 		selectWindow(list[i]);
 		run("Close");
