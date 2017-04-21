@@ -5,12 +5,14 @@ dir1 = getDirectory("Choose a source Directory ");
 dir2 = getDirectory("Choose a result Directory ");
 list = getFileList(dir1);
 
+
 // loop trough the files and find the background image
 for (i=0; i<list.length; i++) {
-	if(!matches(list[i], ".*background.*")) {
-	bgr = list[i];
-	open(dir1+bgr);
-	run("Invert");
+	if(matches(list[i], ".*background.*")) {
+		bgr = list[i];
+		open(dir1+bgr);
+		run("RGB Color");
+		run("Invert");
 	}
 }
 
