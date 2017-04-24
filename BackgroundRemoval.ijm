@@ -23,12 +23,14 @@ for (i=0; i<list.length; i++) {
 		setBatchMode(true);
 		showProgress(i, list.length);
 		open(path);
+		name = File.nameWithoutExtension;
+		print(name);
 		run("RGB Color");
 		imageCalculator("Add create stack", list[i],bgr);
 		selectWindow(list[i]);
 		run("Close");
 		selectWindow("Result of "+list[i]);
-		saveAs("png", dir2+list[i]+"_result");
+		saveAs("png", dir2+name);
 		close();
 	}
 }
